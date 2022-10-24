@@ -12,7 +12,7 @@
 // })
 
 let p = document.getElementById(`paragraf`)
-let buttonChangeJoke = document.getElementById(`change-joke-button`)
+let randomJokeButton = document.getElementById(`change-joke-button`)
 let categoryButton = document.getElementById(`category-button`)
 let updarteJokeFronCategory = document.getElementById(`update-joke`)
 let form = document.getElementById(`form-category-joke`)
@@ -40,12 +40,12 @@ form.addEventListener(`click`, (e) => {
     })
     })
 
-// buttonChangeJoke.addEventListener(`click`, () => {
-//     fetch(`https://api.chucknorris.io/jokes/random`)
-//         .then(res => res.json())
-//         .then(joke => {
-//             p.textContent = joke.value
-//             console.log(`asd`)
-//         })
-// })
+    randomJokeButton.addEventListener(`click`, () => {
+    fetch(`https://api.chucknorris.io/jokes/random`)
+        .then(res => res.json())
+        .then(joke => {
+            p.textContent = joke.value
+            console.log(`asd`)
+        })
+})
 
